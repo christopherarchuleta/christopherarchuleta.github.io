@@ -19,3 +19,22 @@
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+#PicAnchor{
+  background-color: black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: auto;
+}
+
+#Image {
+  background-color: #0f2411;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+p {
+  padding: 15px;
+}
