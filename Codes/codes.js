@@ -4,6 +4,6 @@
 $("img#Image").hover(function() {
   $(this).css("background-color", "white");
 }, function() {
-  $(this).css("background-color", "#0f2411");
+  $(this).css("background-color", "#0c120c");
   console.log("boi");
 });

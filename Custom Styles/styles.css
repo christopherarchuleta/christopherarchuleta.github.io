@@ -30,11 +30,16 @@
 }
 
 #Image {
-  background-color: #0f2411;
+  background-color: #0c120c;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 p {
-  padding: 15px;
+  padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
+
+
