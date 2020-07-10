@@ -20,6 +20,36 @@
     visibility: visible;
 }
 
+.header {
+  width: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.header .nav-mobile span {
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 5px;
+  right: 5px;
+  height: 4px;
+  border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  transition: background 0s .3s;
+    transition-property: background;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+    transition-delay: 0.3s;
+}
+
 #PicAnchor{
   background-color: black;
   padding-top: 15px;
@@ -41,5 +71,3 @@ p {
     padding-top: 0.3em;
     padding-bottom: 0.3em;
 }
-
-
