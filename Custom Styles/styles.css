@@ -31,24 +31,31 @@
     overflow-y: hidden;
 }
 
-.header .nav-mobile span {
-  display: block;
-  position: absolute;
-  top: 18px;
-  left: 5px;
-  right: 5px;
-  height: 4px;
-  border-radius: 3px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-  transition: background 0s .3s;
-    transition-property: background;
-    transition-duration: 0s;
-    transition-timing-function: ease;
-    transition-delay: 0.3s;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0c120c;
 }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.linked a:hover {
+  background-color: #00884b;
+}
+
 
 #PicAnchor{
   background-color: black;
