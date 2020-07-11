@@ -9,6 +9,12 @@ h2 {
   text-decoration: underline;
 }
 
+.textlink {
+  font-weight: bold;
+  color: #a1d99b;
+  background-color: #0c170d;
+}
+
 .container-fluid {
   background-color: #0c170d;
 }
