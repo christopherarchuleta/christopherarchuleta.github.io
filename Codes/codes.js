@@ -6,3 +6,18 @@ $("img#Image").hover(function() {
 }, function() {
   $(this).css("background-color", "#0c120c");
 });
+
+
+// Responsive class in topnav makes menu vertically oriented
+// Function below activated the responsive class
+// Expand menu upon icon click
+document.getElementById("icon").onclick = function()
+{verticalMenu()};
+function verticalMenu() {
+  var vertBar = document.getElementById("Navbar");
+  if (vertBar.className === "topnav") {
+    vertBar.className += " responsive";
+  } else {
+    vertBar.className = "topnav";
+  }
+};
