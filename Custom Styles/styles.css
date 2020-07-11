@@ -1,3 +1,14 @@
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-family: Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
 .container-fluid {
   background-color: #0c170d;
 }
@@ -18,6 +29,7 @@
 .topnav a {
   float: left;
   display: block;
+  font-family: Helvetica, sans-serif;
   text-align: center;
   padding: 14px 26px;
   text-decoration: none;
@@ -109,13 +121,15 @@
 }
 
 p {
-  padding-left: 0.1em;
+    font-family: Helvetica, sans-serif;
+    padding-left: 0.1em;
     padding-right: 0.1em;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
 }
 
 .description-text {
+  font-family: Helvetica, sans-serif;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 30px;
