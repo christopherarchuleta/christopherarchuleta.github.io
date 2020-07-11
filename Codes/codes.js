@@ -2,8 +2,7 @@
 // The second function changes the color
 // back when the pointer leaves the image
 $("img#Image").hover(function() {
-  $(this).css("background-color", "white");
+  $(this).css("background-color", "#00884b");
 }, function() {
   $(this).css("background-color", "#0c120c");
-  console.log("boi");
 });
