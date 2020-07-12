@@ -28,7 +28,7 @@ h2 {
 }
 
 .topnav {
-  background-color: #000000;
+  background-color: #00884b;
   overflow: hidden;
 }
 
@@ -39,6 +39,7 @@ h2 {
   text-align: center;
   padding: 14px 26px;
   text-decoration: none;
+  background-color: #00884b;
 }
 
 /* Hide link that opens and closes navigation bar on mobile devices */
@@ -105,7 +106,7 @@ h2 {
 
 /* Change the link color on hover */
 .topnav a.linked:hover {
-  background-color: #00884b;
+  background-color: #0c170d;
 }
 
 
