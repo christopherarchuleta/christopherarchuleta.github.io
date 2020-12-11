@@ -2,11 +2,17 @@ h1 {
   font-family: Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: 3px;
+  animation: fadeIn ease 0.5s;
+  -webkit-animation: fadeIn ease 0.5s;
 }
 
 h2 {
   font-family: Helvetica, sans-serif;
-  text-decoration: underline;
+  padding-left: 30px;
+  padding-top: 30px;
+  font-weight: bold;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
 }
 
 .textlink {
@@ -129,16 +135,19 @@ h2 {
 
 p {
     font-family: Helvetica, sans-serif;
+    line-height: 2;
     padding-left: 0.1em;
     padding-right: 0.1em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
 }
 
 .description-text {
   font-family: Helvetica, sans-serif;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -151,4 +160,30 @@ p {
   padding-bottom:0px;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+/* Fade times for multiple browsers */
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
