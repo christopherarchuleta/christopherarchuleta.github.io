@@ -18,19 +18,19 @@ h2 {
 .textlink {
   font-weight: bold;
   color: #a1d99b;
-  background-color: #0c3022;
+  background-color: #0c2c1e;
 }
 
 .container-fluid {
-  background-color: #0c3022;
+  background-color: #0c2c1e;
 }
 
 #MapContainer {
-  background-color: #0c3022;
+  background-color: #0c2c1e;
 }
 
 #page-content-wrapper {
-  background-color: #0c3022;
+  background-color: #0c2c1e;
 }
 
 .topnav {
@@ -112,12 +112,12 @@ h2 {
 
 /* Change the link color on hover */
 .topnav a.linked:hover {
-  background-color: #0c3022;
+  background-color: #0c2c1e;
 }
 
 
 #PicAnchor{
-  background-color: #0c3022;
+  background-color: #0c2c1e;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
