@@ -162,6 +162,38 @@ p {
   padding-right: 30px;
 }
 
+
+/* Resume styling */
+/* Change resume margins based on screen size */
+@media screen and (min-width: 1000px) {
+  .resumeContainer {
+    margin-left: 12.5vw;
+    margin-right: 12.5vw;
+  }
+}
+.resumeHeading {
+  font-size: large;
+}
+.resumeLocations {
+
+}
+.resumePosition {
+
+}
+.resumeContent {
+
+}
+/* Dates are left of vertical line on large screens */
+@media screen and (min-width: 1000px) {
+  .resumeDates {
+    text-align: right;
+    border-right-width: thin;
+    border-right-color: white;
+    border-right-style: solid;
+  }
+}
+
+
 /* Fade times for multiple browsers */
 @keyframes fadeIn {
 0% {opacity:0;}
