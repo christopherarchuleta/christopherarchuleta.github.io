@@ -99,6 +99,11 @@ h2 {
     visibility: visible;
 }
 
+.resumeTitle {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
 .header {
   width: auto;
   height: 50px;
@@ -171,22 +176,36 @@ p {
     margin-right: 12.5vw;
   }
 }
+/* List items */
+li::marker {
+  float: right;
+
+}
 .resumeHeading {
   font-size: large;
+  float: right;
+  width: 85%;
 }
 .resumeLocations {
-
+  float: right;
+  width: 85%;
 }
 .resumePosition {
-
+  float: right;
+  width: 85%;
 }
 .resumeContent {
-
+float: right;
+width: 85%;
+padding-left: 0.5em;
 }
 /* Dates are left of vertical line on large screens */
 @media screen and (min-width: 1000px) {
   .resumeDates {
+    float: left;
+    width: 12.5%;
     text-align: right;
+    padding-right: 0.5em;
     border-right-width: thin;
     border-right-color: white;
     border-right-style: solid;
