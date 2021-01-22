@@ -61,20 +61,47 @@
         <p class="description-text">    I made this poster in January 2021 and submitted it to the <a class="textlink" href="https://www.wlia.org/tag/map-contest/">Wisconsin Land Information Association (WLIA)</a> for their annual map contest.
         </p>
         <h2 align="left">Background</h2>
-        <p class="description-text">    This course began as an introduction to UX theory with a simultaneous introduction to coding in JavaScript. In this early stage, the class content focused on when one should make a map interactive, breaking down the interaction process, and connecting user objectives to corresponding interface operators and operands. At the same time, lab assignments consisted of basic coding practices, an introduction to Leaflet, and an introduction to D3. Eventually, the two parts of the class worked in tandem as the lecture topics transitioned to styling and usability.
+        <p class="description-text">    After drafting some ideas on paper, I made this map using QGIS and Adobe Illustrator. This map has larger dimensions than my other maps because it is supposed to be an informative poster. The WLIA <map>
+           contest has multiple entries, and this map was my entry for the poster contest. I also submitted a map for the "Most Unique" competition.
+        </map>
         </p>
-        <h2 align="left">Process</h2>
-        <p class="description-text">    Once the lecture and lab components of the class began to merge, students had to group together to create an interactive map, starting with a use case scenario and an example user. Regan spearheaded the project with a choice of either mapping disenfranchisement of Alaskan natives or mapping voter suppression in the U.S. After joining her, Michael and I opted for her latter proposal.
+        <h2 align="left">Idea</h2>
+        <p class="description-text">    When I was reading news articles about the exodus of Silicon Valley companies, I immediately recognized that there was a geographical story to tell.
         </p>
-        <p class="description-text">    We initially had trouble deciding what we actually wanted to create concerning our topic. One important development in our process was the shift from the city-focused maps that I proposed to a national map. Though we all argued that a national map comparing the states’ voting laws would be part of the project, my idea to look at individual cities was too anecdotal. Likewise, Michael planned to map voter turnout but we instead chose to describe voter turnout and related laws in text and video. This avoided a larger workload and an arguably misleading enumeration of data at the state scale.
+        <p class="description-text">    At first, I wanted to explain why Silicon Valley was declining relative to places like Texas and Florida, specifically Austin and Miami. However, an <a class="textlink" href="https://www.nytimes.com/2020/12/28/opinion/silicon-valley-exodus.html">opinion piece</a>
+          by Margaret O'Mara made me rethink the efficacy of a map that incorrectly portrayed Silicon Valley as some desolate place. The fact is that it is an economic powerhouse.
         </p>
-        <p class="description-text">    Eventually, we had to refine our persona and use case scenario. We expected our users to be somewhat familiar with online maps and be interested in how voting laws differ by location. Our hypothetical persona fit into this category, having been a government official who wanted to compare her state’s voting laws to those of other states. Her goal of voters’ rights advocacy would benefit from the site since she could see which laws contributed to the strictness of different states. The persona would mainly compare her state with other states in our use case scenario. With each reexpression, she could see specifically how her state was stricter in some laws and less strict in others. To get information on each of the laws explored in the map, she would quickly look through the text below. Doing so would clarify how the variations of each law translated to relative ease of voting.
+        <p class="description-text">    I decided to look further into the places that the tech companies were going to. I was already drawn toward Austin, knowing that at the end of 2020, Austin was on track to becoming the next US city with over one million people.
+          What I saw in Austin was a legacy of technological enterprise spanning multiple generations. Once I found the convenient and apparently comprehensive company data on the <a class="textlink" href="https://www.austinchamber.com/economic-development/business-climate/relocations-expansions">
+          Austin Chamber of Commerce</a> website, I knew that my map would be about Austin.
         </p>
-        <p class="description-text">    Roth suggested that we should use <a class="textlink" href="http://yourbodynotyourchoice.github.io/">Your Body (Not) Your Choice</a> by <a class="textlink" href="https://twitter.com/katiekowalsky">Katie Kowalsky</a>, <a class="textlink" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a>, and <a class="textlink" href="https://twitter.com/tolomaps">Robin Tolochko</a> as a template for our map. Their setup worked well for our project because the user could see the geographies of different laws as well as a composite map. Most of the data came from the <a class="textlink" href="https://www.ncsl.org/">National Conference of State Legislatures</a>. They made U.S. maps for most of the laws that they studied on their website. Regan assigned numerical values for the strictness of a given law, and gave each state a letter grade based on the sum of its laws’ values. The map itself was an equal-area choropleth map, with values corresponding to the strictness of a given law. The map’s interactive features were not created primarily for mobile devices, but much of the interface is responsive and most of the interactivity applies to mobile devices. For interactivity, we implemented highlighting for hovering, reexpression for each law, and retrieval of a state’s profile. Hovering over a state summoned its profile, which showed that state’s strictness for all of the laws assessed in the map.
+        <p class="description-text">    The Austin Chamber of Commerce recorded the businesses that relocated to or expanded in the Austin Metropolitan Statistical Area (MSA). The data included the name of the companies, descriptions of the companies' goods and services, the month of the announced
+          action (expand and/or relocate), and the municipality where the action took place.
         </p>
-        <p class="description-text">    Apart from the map, we decided to create a website with a number of other components. When the page loaded, the user saw the title, a brief introduction, and the map. We put an accordion panel to the left of the map, which nested legends for each reexpression of the map. We made the panel expand when clicked. A certain legend would appear in the expanded panel. Also, we made the map recolor in correspondence with the expanded legend, essentially making the legend panel the mode of reexpression.
+        <h2 align="left">Graph</h2>
+        <p class="description-text">    I knew that I wanted to make a map showing where all of Austin's business growth in 2020 was located. I made the graph first, though. In December 2020, when I decided to make a map about Austin and its flourishing businesses, I read a 2020
+          National Geographic magazine with an <a class="classlink" href="https://www.nationalgeographic.com/magazine/2020/12/north-americas-most-valuable-resource-is-at-risk-feature/">article</a> about the challenges facing the Great Lakes.
+          In the middle of the article was a graphic about the invasive species of the Great Lakes. There were illustrations of animals like sea lampreys and Pacific Salmon. There was also a timeline with dots stacked over it. Each dot represented an invasive species and the year
+          that the dot was over corresponded with the year that the invasive species was first detected in the Great Lakes.
         </p>
-
+        <p class="description-text">    That inspired me to make a timeline of the business expansions and relocations in the Austin MSA. Since the data I found broke down the expansions and relocations by month, I made a timeline of the announced company expansions and relocations.
+          I symbolized the dots according to what kind of activity it was (relocation and/or expansion) and whether the location was a branch or a headquarter.
+        </p>
+        <p class="description-text">    Despite showing all of the companies, I wanted to focus on the technology industry since that would be most relevant to a general audience. So, I followed the example of the National Geographic chart and visually accented the businesses of interest.
+          This meant that I singled out some examples of tech companies and provided annotations. Annotations make graphs easier to read and assist readers in seeing how the graph corroborates the overall message.
+        </p>
+        <h2 align="left">Map</h2>
+        <p class="description-text">    The data provided the municipality of each company activity, but did not give their exact locations. I made a basemap of the Austin MSA on QGIS with DOT data. I added the specific locations of business activities after finding as many addresses as I could.
+        </p>
+        <p class="description-text">    I didn't annotate the map as I did with the graph. I could have, but I wanted the map to be more holistic by displaying all of the companies without overemphasizing certain industries and undermining others.
+        </p>
+        <h2 align="left">Design</h2>
+        <p class="description-text">    The poster is supposed to have a style that reminds people of tech companies. This stylization was not meant to be too overwhelming. I felt that the dark background, the heavy use of blue, and the sans-serif typeface all evoked a sense of modernity.
+        </p>
+        <p class="description-text">
+          I usually try to make an accommodating color palette, and in this case I did not add any red or green hues. I saved the yellow for the map so that it could stand out against the dark blue background. I created a slight fog-of-war effect on the map margins to remind the reader that the Austin
+          MSA is part of a larger geography while still visually limiting the scope my area of interest. The relative sizing of the explanatory text, graph, and map was supposed to make the poster as whole as balanced as possible.
+        </p>
 
         <footer>
           <div align="center">
