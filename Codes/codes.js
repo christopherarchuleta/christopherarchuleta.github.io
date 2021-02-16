@@ -4,7 +4,7 @@
 $("img#Image").hover(function() {
   $(this).css("background-color", "#00884b");
 }, function() {
-  $(this).css("background-color", "#0c120c");
+  $(this).css("background-color", "#0c2c1e");
 });
 
 
