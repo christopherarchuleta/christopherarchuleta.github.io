@@ -72,37 +72,36 @@
         </p>
         <p class="description-text"> As a project worker, the first task on my agenda was to create a proposal to present to the Park Commission. The Chair of the Park Commission contacted people who expressed
           interest in working on the project. The chair told prospective workers that the Commission's target users were people from the immediate area wishing to find trails and park entrances with ease. At the time, the Town did not have coordinates to their trailheads or park entrances, but rather located them according to adjacent land parcels.
-          They also had a series of PDF maps on their website, which are still in use, though they find them difficult to understand. Some of these maps are displayed at majors parks and greenspaces in the Town.
+          They also had a series of PDF maps on their website, which are still in use, though they find them difficult to understand. Some of these maps are displayed at major parks and greenspaces in the Town.
         </p>
         <p class="description-text">    Six or seven people initially showed interest in the project, but most of them were preoccupied with other work.
           I ended up collaborating with my UWCL co-worker and classmate, <a class="textlink" href="https://www.linkedin.com/in/joshua-riebe-07a25a1a2/" target="_blank">Josh Riebe</a>. We prioritized the first and third tasks after discussing our schedules and workloads.
         </p>
         <h2 align="left">Proposal</h2>
         <p class="description-text">    One of the first things we figured out while drafting the proposal was how we would divide our labor. Since the purpose of obtaining trailhead and park coordinates was to enable casual navigation, the coordinates did not have to be highly accurate.
-          As long as the coordinates would enable successful navigation with map applications, they would fulfill their purpose. I spent my summer biking, so I decided to bike to the Town of Middleton and
-          record GPS coordinates with my phone while doing so. I verified my coordinates by plugging them into several mapping applications to see if they located trailheads and park entrances correctly.
+          As long as the coordinates enabled successful navigation on map applications, they would fulfill their purpose. I decided to bike to the Town of Middleton, recording GPS coordinates with my phone while doing so. I verified my coordinates by plugging them into several mapping applications. This ensured that my coordinates located trailheads and park entrances correctly.
         </p>
-        <p class="description-text">    I had more web mapping experience than Josh at the time, and I also had fewer obligations than Josh. So, we decided that I would work on an
+        <p class="description-text">    I had more web mapping experience than Josh at the time, and I also had fewer obligations than Josh. We decided that I would make an
           interactive map while Josh would make corresponding maps for PDFs. I consulted with <a class="textlink" href="https://geography.wisc.edu/cartography/people/Roth.html#education" target="_blank">Robert Roth</a> on making an effective proposal. Josh and I then worked out details such as use case scenarios, design details, interactivity details, desired pay rates, and objectives.
         </p>
-        <p class="description-text">    On July 13, 2020, Josh and I presented our proposal to the Park Commission during their meeting. The chair gave good feedback on our presentation, and most of the Commission agreed that the maps would improve naviagtion with better design and interactivity.
+        <p class="description-text">    On July 13, 2020, Josh and I presented our proposal in a park commission meeting. The chair gave good feedback on our presentation. Most of the Commission agreed that the maps' improved design and interactivity would make  naviagtion easier.
         </p>
         <p class="description-text">    However, I failed to make a good case for the modifiability of the interactive map. The Town
-          wanted to create new trails and improve existing ones, making the modifiability of our product crucial. I proposed a method in which the map would display trails using appended SVGs. Styling these SVGs would be harder, but the advantage of using them would be that I could code all of the proposed trails ahead of time, as inert blocks. That way, when any changes occured, someone
-          could simply activate the code. The Commission members were reserved despite my proposed method, but fortunately someone said that a GIS specialist connected to the Town could implement any necessary changes in the future.
+          wanted to create new trails and improve existing ones. This meant that the modifiability of our product was crucial. I proposed a method in which the map would display trails using appended SVGs. Styling these SVGs would be harder, but the advantage of using them would be that I could code all of the proposed trails ahead of time as inert blocks. That way, when any changes occured, someone
+          could simply activate the code. The Commission members were hesitant despite my proposed solution. Fortunately, someone said that a GIS specialist affiliated with the Town could implement any necessary changes in the future.
         </p>
-        <p class="description-text">    Ultimately, the Commission decided that Josh and I could begin working if we so wished, but they were not sure if they wanted to pay us at our proposed rate.
+        <p class="description-text">    Finally, the Commission decided that Josh and I could begin working if we so wished, but they were not sure if they wanted to pay us at our proposed rate.
           Josh and I were led to believe that the Commission would eventually agree to pay us, and we both had difficult Fall semesters approaching. Based on these two circumstances, I decided to follow through with the work.
         </p>
         <p class="description-text"><a class="textlink" href="Assets/Middleton_Proposal.pdf" target="_blank">Proposal Document</a></p>
         <p class="description-text"><a class="textlink" href="Assets/Meeting_Minutes.pdf" target="_blank">Meeting Minutes</a></p>
         <h2 align="left">Map</h2>
         <p class="description-text">    The Town of Middleton provided Josh and I with shapefiles of trails, parks, and public land parcels. We found some of the attribute field names confusing, and we were not provided with comprehensive metadata. We asked the chair for some correspondence or documentation to resolve our
-          confusion, but we still have not heard from anyone. Josh and I agreed on how we would stylize the map features, including the different trail types (paved, gravel, grass, etc.), but Josh could only make a basemap with the information we were provided with. He didn't want to proceed until we knew which field specified the trail types and what the attribute abbreviations stood for.
+          confusion, but we still have not heard from anyone. Josh and I agreed on how we would stylize the map features, including the different trail types (paved, gravel, grass, etc.), but Josh could only make a basemap with the information we had. He didn't want to proceed until we knew which field specified the trail types and what the attribute abbreviations stood for.
         </p>
         <p class="description-text">    I likewise do not have the different trail surfaces represented in my interactive map. However, I was still able to make a functioning map with responsive design and naviagtion capabilities.
         </p>
-        <p class="description-text">    Our basemap design is supposed to make parks and greenspaces the figure. Most of the other features have neutral or unsaturated colors. We defined most features without outlines, relying on contrasting fills to define form instead. We saved the darkest colors for the trails so that they would stand out.
+        <p class="description-text">    Our basemap design is supposed to make parks and greenspaces rise to figure. Most of the other features have neutral or unsaturated colors. We defined most features without outlines, relying on contrasting fills to define form instead. We saved the darkest colors for the trails so that they would stand out.
         </p>
         <p class="description-text">    The code for the map is largely based off of tutorials from <a class="textlink" href="https://docs.mapbox.com/help/tutorials/add-points-pt-2/" target="_blank">Mapbox</a> and <a class="textlink" href="https://leafletjs.com/examples.html" target="_blank">Leaflet</a>. To facilitate the styling process, I created a
           <a class="textlink" href="https://api.mapbox.com/styles/v1/cjarchuleta/ckdqb5kti016e19l7klhs8i2e.html?fresh=true&title=view&access_token=pk.eyJ1IjoiY2phcmNodWxldGEiLCJhIjoiY2syYW9pcTAyMWV5ejNtbzZhM25zNnpsdSJ9.7Gl9zzKB40HnoFIWBW-Tvg" target="_blank">Mapbox style</a> based on Clare Trainor's
