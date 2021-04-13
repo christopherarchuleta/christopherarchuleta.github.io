@@ -23,6 +23,13 @@ h2 {
 
 .container-fluid {
   background-color: #0c2c1e;
+  max-width: 1000px;
+}
+
+.resume-container-fluid {
+  background-color: #0c2c1e;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 #MapContainer {
@@ -150,7 +157,7 @@ h2 {
 
 p {
     font-family: Helvetica, sans-serif;
-    line-height: 2;
+    line-height: 1.8;
     padding-left: 0.1em;
     padding-right: 0.1em;
     padding-top: 0.1em;
