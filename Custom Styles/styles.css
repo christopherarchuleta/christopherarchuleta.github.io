@@ -266,6 +266,7 @@ width: 85%; */
   }
   .resumeDates {
     flex-basis: 0;
+    min-width: 18%;
   }
   #objective.resumeContent {
     margin-left: 0vw;
