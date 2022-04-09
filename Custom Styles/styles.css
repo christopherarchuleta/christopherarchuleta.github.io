@@ -148,11 +148,19 @@ h2 {
 }
 
 #Image {
-  background-color: black;
+  background-color: #0c2c1e;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+#Image:hover {
+  background-color: #00884b;
+}
+
+#Image:after {
+  background-color: #0c2c1e;
 }
 
 p {
@@ -305,7 +313,8 @@ width: 85%; */
 .fa {
   background: #0c2c1e;
   color:#00884b;
-  size: 1rem;
+  font-size: 30px;
+  padding: 5px;
 }
 
 .fa:hover {
