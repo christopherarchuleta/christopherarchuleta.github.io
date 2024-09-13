@@ -24,17 +24,21 @@ body { margin: 0; padding: 0; }
     
         .map-overlay {
             font:
-                12px/20px 'Ubuntu',
+                14px/24px 'Tahoma',
                 sans-serif;
             background-color: #569c68;
+            border-color: cornsilk;
             border-radius: 3px;
             padding: 10px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
     
-        .map-overlay h2,
+        .map-overlay h2 {
+            color: #df9fb9;
+        },
         .map-overlay p {
             margin: 0 0 10px;
+            color: #df9fb9;
         }
     </style>
 
@@ -44,6 +48,7 @@ body { margin: 0; padding: 0; }
     <div class="map-overlay">
         <h2 id="location-title"></h2>
         <p id="location-description"></p>
+        <div id="location-photo" align="center"></div>
     </div>
 </div>
 
@@ -58,6 +63,7 @@ body { margin: 0; padding: 0; }
 
     const title = document.getElementById('location-title'); //From the pop-up/slide
     const description = document.getElementById('location-description');
+    const photo = document.getElementById('location-photo');
 
     const locations = [
         {
@@ -65,6 +71,8 @@ body { margin: 0; padding: 0; }
             'title': 'Milwaukee Brat House',
             'description':
                 "Our very first date! 08/26/2022",
+            // 'photo':
+            //     <img src="Assets\Headshot_Original.jpg" alt="Professional Photo of Chris Archuleta" style="height:auto; max-width:80%; border-radius: 10px;" align="center">,
             'camera': {
                 center: [-87.8873, 43.0897],
                 zoom: 15,
@@ -129,13 +137,14 @@ body { margin: 0; padding: 0; }
     ];
 
     function highlightSpot(code) {
-        // Only show the point feature that corresponds to `borocode` in the data.
+        // Only show the point feature that corresponds to `Name` in the data.
         map.setFilter('omj-map-coordinates-sheet1-6bm15c', ['==', 'Name', code]);
     }
 
     function playback(index) {
         title.textContent = locations[index].title; //The title for a specific location is based on the locations list position
         description.textContent = locations[index].description;
+        photo.textContent = locations[index].photo;
 
         highlightSpot(locations[index].id ? locations[index].id : ''); //Argument for highlightSpot, which is the code parameter, is determined by locations list position
 
@@ -148,7 +157,7 @@ body { margin: 0; padding: 0; }
                 // Increment index, looping back to the first after the last location.
                 index = (index + 1) % locations.length;
                 playback(index);
-            }, 6000); // After callback, show the location for 6 seconds.
+            }, 20000); // After callback, show the location for 20 seconds.
         });
     }
 
