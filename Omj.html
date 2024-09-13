@@ -130,7 +130,7 @@ body { margin: 0; padding: 0; }
 
     function highlightSpot(code) {
         // Only show the point feature that corresponds to `borocode` in the data.
-        map.setFilter('omj-map-coordinates-sheet1-6bm15c', ['==', 'borocode', code]);
+        map.setFilter('omj-map-coordinates-sheet1-6bm15c', ['==', 'Name', code]);
     }
 
     function playback(index) {
@@ -148,7 +148,7 @@ body { margin: 0; padding: 0; }
                 // Increment index, looping back to the first after the last location.
                 index = (index + 1) % locations.length;
                 playback(index);
-            }, 20000); // After callback, show the location for 20 seconds.
+            }, 6000); // After callback, show the location for 6 seconds.
         });
     }
 
@@ -156,29 +156,25 @@ body { margin: 0; padding: 0; }
     title.textContent = locations[locations.length - 1].title;
     description.textContent = locations[locations.length - 1].description;
 
-    // map.on('load', () => {
-    //     map.addSource('boroughs', {
-    //         'type': 'vector',
-    //         'url': 'mapbox://mapbox.8ibmsn6u'
-    //     });
-    //     map.addLayer(
-    //         {
-    //             'id': 'highlight',
-    //             'type': 'fill',
-    //             'source': 'boroughs',
-    //             'source-layer': 'original',
-    //             'paint': {
-    //                 'fill-color': '#fd6b50',
-    //                 'fill-opacity': 0.25
-    //             },
-    //             'filter': ['==', 'borocode', '']
-    //         },
-    //         'road-label' // Place polygon under labels.
-    //     );
+    map.on('load', () => {
+        // map.addLayer(
+        //     {
+        //         'id': 'highlight',
+        //         'type': 'fill',
+        //         'source': 'boroughs',
+        //         'source-layer': 'original',
+        //         'paint': {
+        //             'fill-color': '#fd6b50',
+        //             'fill-opacity': 0.25
+        //         },
+        //         'filter': ['==', 'borocode', '']
+        //     },
+        //     'road-label' // Place polygon under labels.
+        // );
 
-    //     // Start the playback animation for each borough.
-    //     playback(0);
-    // });
+        // Start the playback animation for each borough.
+        playback(0);
+    });
 </script>
 
 </body>
