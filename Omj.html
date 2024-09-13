@@ -37,40 +37,49 @@ body { margin: 0; padding: 0; }
             margin: 0 0 10px;
         }
     </style>
+
 <div id="map"></div>
+
+<div class="map-overlay-container">
+    <div class="map-overlay">
+        <h2 id="location-title"></h2>
+        <p id="location-description"></p>
+    </div>
+</div>
+
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY2phcmNodWxldGExMnV3bSIsImEiOiJjbHI5bHAzNWcwNGplMmtuc3hhMGwxMTJ1In0.1pApXn83VgwmfCIEQFYR6A';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/cjarchuleta12uwm/clzbm0i23002r01qp2u2k48c3', // style URL
         center: [-87.8873, 43.0897], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-        zoom: 15 // starting zoom
+        zoom: 12 // starting zoom
     })  
 
-    const title = document.getElementById('location-title');
+    const title = document.getElementById('location-title'); //From the pop-up/slide
     const description = document.getElementById('location-description');
 
     const locations = [
         {
             'id': '2',
-            'title': 'The Bronx',
+            'title': 'Milwaukee Brat House',
             'description':
-                "This is where hip-hop was born, where the Yankees became a dynasty and where you can find New York City's leading zoo and botanical garden.",
+                "Our very first date! 08/26/2022",
             'camera': {
-                center: [-73.8709, 40.8255],
-                zoom: 12.21,
-                pitch: 50
+                center: [-87.8873, 43.0897],
+                zoom: 15,
+                pitch: 50 // Up-down angle, with 0 being straight down and 85 being toward the horizon
             }
         },
         {
             'id': '3',
-            'title': 'Brooklyn',
+            'title': 'Home',
             'description':
-                "No matter how hip it looks on TV, NYC's most populous borough is best experienced in person. Read on to find out about live music, Prospect Park, Nets basketball and more.",
+                "You, me, cats, plants, food, TV, games, dancing, and bed.",
             'camera': {
-                center: [-73.9499, 40.626],
-                bearing: -8.9,
-                zoom: 11.68
+                center: [-87.8854, 43.089],
+                bearing: -8.9, //Compass, 0 is north
+                zoom: 15
             }
         },
         {
@@ -107,9 +116,9 @@ body { margin: 0; padding: 0; }
             }
         },
         {
-            'title': 'Boroughs of new york',
+            'title': 'HAPPY ANNIVERSARY, OLIVIA!',
             'description':
-                'New York City is made up of five boroughs: the Bronx, Brooklyn, Manhattan, Queens and Staten Island. Each one has enough attractions—and enough personality—to be a city all its own.',
+                'It aint much, but its honest work',
             'camera': {
                 center: [-74.0315, 40.6989],
                 zoom: 9.68,
@@ -119,16 +128,16 @@ body { margin: 0; padding: 0; }
         }
     ];
 
-    function highlightBorough(code) {
-        // Only show the polygon feature that corresponds to `borocode` in the data.
-        map.setFilter('highlight', ['==', 'borocode', code]);
+    function highlightSpot(code) {
+        // Only show the point feature that corresponds to `borocode` in the data.
+        map.setFilter('omj-map-coordinates-sheet1-6bm15c', ['==', 'borocode', code]);
     }
 
     function playback(index) {
-        title.textContent = locations[index].title;
+        title.textContent = locations[index].title; //The title for a specific location is based on the locations list position
         description.textContent = locations[index].description;
 
-        highlightBorough(locations[index].id ? locations[index].id : '');
+        highlightSpot(locations[index].id ? locations[index].id : ''); //Argument for highlightSpot, which is the code parameter, is determined by locations list position
 
         // Animate the map position based on camera properties.
         map.flyTo(locations[index].camera);
@@ -139,7 +148,7 @@ body { margin: 0; padding: 0; }
                 // Increment index, looping back to the first after the last location.
                 index = (index + 1) % locations.length;
                 playback(index);
-            }, 3000); // After callback, show the location for 3 seconds.
+            }, 20000); // After callback, show the location for 20 seconds.
         });
     }
 
