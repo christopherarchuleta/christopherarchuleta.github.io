@@ -88,18 +88,19 @@ body { margin: 0; padding: 0; }
 </div>
 
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiY2phcmNodWxldGExMnV3bSIsImEiOiJjbHI5bHAzNWcwNGplMmtuc3hhMGwxMTJ1In0.1pApXn83VgwmfCIEQFYR6A';
+	mapboxgl.accessToken = 'pk.eyJ1IjoiY2phcmNodWxldGExMnV3bSIsImEiOiJjbTFiNXhwenYxbDluMmpvaW5tNWpyaDI1In0.tZ-qZeLZ34HEOdzbLIh4Kw';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/cjarchuleta12uwm/clzbm0i23002r01qp2u2k48c3', // style URL
-        center: [-125, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-        zoom: 3 // starting zoom
+        center: [-105, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+        zoom: 3.4 // starting zoom
     })  
 
     const title = document.getElementById('location-title'); //From the pop-up/slide/map overlay
     const description = document.getElementById('location-description');
     const photo = document.getElementById('location-photo');
 
+    // Images constant is list of images for the map overlay
     const images = ['Assets/Chris_Tenney.JPG','Assets/Chris_Kegonsa.jpg','Assets/Chris_Tenney.JPG']
 
     const locations = [
@@ -108,8 +109,8 @@ body { margin: 0; padding: 0; }
             'description':
                 'It ain`t much, but it`s honest work. I love you so much and I cherish all of our memories!',
             'camera': {
-                center: [-125, 40],
-                zoom: 3,
+                center: [-105, 40],
+                zoom: 3.4,
                 bearing: 0,
                 pitch: 0
             }
@@ -137,6 +138,17 @@ body { margin: 0; padding: 0; }
             }
         },
         {
+            'id': '4',
+            'title': 'UWM',
+            'description':
+                "The hell that brought us together.",
+            'camera': {
+                center: [-87.8804, 43.0769],
+                bearing: 0,
+                zoom: 13
+            }
+        },
+        {
             'id': '1',
             'title': 'Bradford Beach',
             'description':
@@ -145,17 +157,6 @@ body { margin: 0; padding: 0; }
                 center: [-87.8752, 43.0598],
                 bearing: 15,
                 zoom: 14.5
-            }
-        },
-        {
-            'id': '4',
-            'title': 'Queens',
-            'description':
-                "Taste food from around the globe, watch Mets baseball and US Open tennis, see cutting-edge art and more in one of the world's most diverse places.",
-            'camera': {
-                center: [-73.8432, 40.6923],
-                bearing: 36,
-                zoom: 11.37
             }
         },
         {
@@ -177,13 +178,13 @@ body { margin: 0; padding: 0; }
     }
 
     function setImage(index) {
-        photo.src = images[index] //Image for a specific location is based on the locations list position
+        photo.src = images[index] //Image for a specific location is based on the images list position, which corresponds to the locations list.
     }
 
     function playback(index) {
         title.textContent = locations[index].title; //The title for a specific location is based on the locations list position
         description.textContent = locations[index].description;
-        setImage(index);
+        setImage(index); //Passing the index into the setImage function synchronizes the locations with the images
 
         highlightSpot(locations[index].id ? locations[index].id : ''); //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position
 
