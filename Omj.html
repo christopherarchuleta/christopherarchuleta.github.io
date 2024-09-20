@@ -44,7 +44,7 @@ body { margin: 0; padding: 0; }
         .map-overlay p {
             text-align: center;
             font-size: 16px;
-            margin: 0 0 3px;
+            margin: 0 0 0.5em;
             color: #0d4a24;
         }
 
@@ -58,7 +58,7 @@ body { margin: 0; padding: 0; }
             .map-overlay h2 {font-size: 30px;}
             .map-overlay p {
                 font-size: 18px;
-                margin: 0 0 6px;
+                margin: 0 0 0.6em;
             }
             .map-overlay img {max-height: 250px;}
         }
@@ -71,9 +71,9 @@ body { margin: 0; padding: 0; }
             .map-overlay h2 {font-size: 36px;}
             .map-overlay p {
                 font-size: 24px;
-                margin: 0 0 6px;
+                margin: 0 0 0.6em;
             }
-            .map-overlay img {max-height: 350px;}
+            .map-overlay img {max-height: 300px;}
         }
     </style>
 
@@ -92,7 +92,7 @@ body { margin: 0; padding: 0; }
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/cjarchuleta12uwm/clzbm0i23002r01qp2u2k48c3', // style URL
-        center: [-95, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+        center: [-145, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
         zoom: 3 // starting zoom
     })  
 
