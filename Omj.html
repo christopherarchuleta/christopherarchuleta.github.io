@@ -37,7 +37,8 @@ body { margin: 0; padding: 0; }
             text-align: center;
             font-size: 36px;
             color: #df9fb9;
-        },
+        }
+
         .map-overlay p {
             text-align: center;
             font-size: 24px;
@@ -52,7 +53,7 @@ body { margin: 0; padding: 0; }
     <div class="map-overlay">
         <h2 id="location-title"></h2>
         <p id="location-description"></p>
-        <div id="location-photo" align="center"></div>
+        <img id="location-photo" style="float:right"></img>
     </div>
 </div>
 
@@ -86,6 +87,8 @@ body { margin: 0; padding: 0; }
             'title': 'Home',
             'description':
                 "You, me, cats, plants, food, TV, games, dancing, and bed.",
+            'photo':
+                photo.src = 'Assets/Chris_Tenney.JPG',
             'camera': {
                 center: [-87.8854, 43.089],
                 bearing: -8.9, //Compass, 0 is north
