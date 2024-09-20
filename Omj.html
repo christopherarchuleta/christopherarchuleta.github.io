@@ -26,7 +26,7 @@ body { margin: 0; padding: 0; }
             font:
                 'Tahoma',
                 sans-serif;
-            background-color: #95eda8;
+            background-color: #d0ffda;
             border-color: cornsilk;
             border-radius: 3px;
             padding: 10px;
@@ -36,24 +36,29 @@ body { margin: 0; padding: 0; }
         .map-overlay h2 {
             text-align: center;
             font-size: 36px;
-            color: #df9fb9;
+            color: #15592d;
         }
 
         .map-overlay p {
             text-align: center;
             font-size: 24px;
             margin: 0 0 10px;
-            color: #df9fb9;
+            color: #15592d;
+        }
+
+        .map-overlay img {
+            object-fit: contain; /* Make the image fit in the map overlay container */
+            float: right;
         }
     </style>
 
 <div id="map"></div>
 
 <div class="map-overlay-container">
-    <div class="map-overlay">
+    <div class="map-overlay"> <!--The titles, descriptions, and image sources are defined for their respective locations below-->
         <h2 id="location-title"></h2>
         <p id="location-description"></p>
-        <img id="location-photo" style="float:right"></img>
+        <img id="location-photo"></img>
     </div>
 </div>
 
@@ -66,7 +71,7 @@ body { margin: 0; padding: 0; }
         zoom: 12 // starting zoom
     })  
 
-    const title = document.getElementById('location-title'); //From the pop-up/slide
+    const title = document.getElementById('location-title'); //From the pop-up/slide/map overlay
     const description = document.getElementById('location-description');
     const photo = document.getElementById('location-photo');
 
@@ -97,9 +102,11 @@ body { margin: 0; padding: 0; }
         },
         {
             'id': '1',
-            'title': 'Manhattan',
+            'title': 'Bradford Beach',
             'description':
-                'Even if you think you know Manhattan—its world-class museums, fine dining and unforgettable views—the borough always has something new and exciting in store.',
+                'We had twisted teas and I got sunburnt.',
+            'photo':
+                photo.src = 'Assets/Chris_Kegonsa.jpg',
             'camera': {
                 center: [-74.007, 40.7437],
                 bearing: 25.3,
