@@ -17,6 +17,7 @@ body { margin: 0; padding: 0; }
             position: absolute;
             width: 90%;
             height:auto;
+            margin: auto;
             top: 0;
             left: 0;
             padding: 5px;
@@ -53,7 +54,9 @@ body { margin: 0; padding: 0; }
 
         /* Mobile first styling */
         @media only screen and (min-width: 768px) {
-            .map-overlay-container {padding: 10px;}
+            .map-overlay-container {
+                width: 33%;
+                padding: 10px;}
             .map-overlay h2 {font-size: 36px;}
             .map-overlay p {
                 font-size: 24px;
