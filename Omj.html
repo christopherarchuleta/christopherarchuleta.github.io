@@ -92,8 +92,8 @@ body { margin: 0; padding: 0; }
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/cjarchuleta12uwm/clzbm0i23002r01qp2u2k48c3', // style URL
-        center: [-87.8873, 43.0897], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-        zoom: 12 // starting zoom
+        center: [-95, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+        zoom: 3 // starting zoom
     })  
 
     const title = document.getElementById('location-title'); //From the pop-up/slide/map overlay
@@ -106,10 +106,10 @@ body { margin: 0; padding: 0; }
         {
             'title': 'HAPPY ANNIVERSARY, OLIVIA!',
             'description':
-                'It aint much, but its honest work',
+                'It ain`t much, but it`s honest work. I love you so much and I cherish all of our memories!',
             'camera': {
-                center: [-74.0315, 40.6989],
-                zoom: 9.68,
+                center: [-95, 40],
+                zoom: 3,
                 bearing: 0,
                 pitch: 0
             }
@@ -130,8 +130,6 @@ body { margin: 0; padding: 0; }
             'title': 'Home',
             'description':
                 "You, me, cats, plants, food, TV, games, dancing, and bed.",
-            // 'photo':
-            //     photo.src = 'Assets/Chris_Tenney.JPG',
             'camera': {
                 center: [-87.8854, 43.089],
                 bearing: -8.9, //Compass, 0 is north
@@ -142,13 +140,11 @@ body { margin: 0; padding: 0; }
             'id': '1',
             'title': 'Bradford Beach',
             'description':
-                'We had twisted teas and I got sunburnt.',
-            // 'photo':
-            //     photo.src = 'Assets/Chris_Kegonsa.jpg',
+                'We had Twisted Teas and I got sunburnt.',
             'camera': {
-                center: [-74.007, 40.7437],
-                bearing: 25.3,
-                zoom: 11.5
+                center: [-87.8752, 43.0598],
+                bearing: 15,
+                zoom: 14.5
             }
         },
         {
@@ -203,10 +199,6 @@ body { margin: 0; padding: 0; }
             }, 8000); // After callback, show the location for 20 seconds.
         });
     }
-
-    // Display the last title/description first.
-    // title.textContent = locations[locations.length - 1].title;
-    // description.textContent = locations[locations.length - 1].description;
 
     map.on('load', () => {
         // Start the playback animation for each location.
