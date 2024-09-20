@@ -74,7 +74,20 @@ body { margin: 0; padding: 0; }
     const description = document.getElementById('location-description');
     const photo = document.getElementById('location-photo');
 
+    const images = ['Assets/Chris_Tenney.JPG','Assets/Chris_Kegonsa.jpg','Assets/Chris_Tenney.JPG']
+
     const locations = [
+        {
+            'title': 'HAPPY ANNIVERSARY, OLIVIA!',
+            'description':
+                'It aint much, but its honest work',
+            'camera': {
+                center: [-74.0315, 40.6989],
+                zoom: 9.68,
+                bearing: 0,
+                pitch: 0
+            }
+        },
         {
             'id': '2',
             'title': 'Milwaukee Brat House',
@@ -91,8 +104,8 @@ body { margin: 0; padding: 0; }
             'title': 'Home',
             'description':
                 "You, me, cats, plants, food, TV, games, dancing, and bed.",
-            'photo':
-                photo.src = 'Assets/Chris_Tenney.JPG',
+            // 'photo':
+            //     photo.src = 'Assets/Chris_Tenney.JPG',
             'camera': {
                 center: [-87.8854, 43.089],
                 bearing: -8.9, //Compass, 0 is north
@@ -104,8 +117,8 @@ body { margin: 0; padding: 0; }
             'title': 'Bradford Beach',
             'description':
                 'We had twisted teas and I got sunburnt.',
-            'photo':
-                photo.src = 'Assets/Chris_Kegonsa.jpg',
+            // 'photo':
+            //     photo.src = 'Assets/Chris_Kegonsa.jpg',
             'camera': {
                 center: [-74.007, 40.7437],
                 bearing: 25.3,
@@ -133,17 +146,6 @@ body { margin: 0; padding: 0; }
                 bearing: 28.4,
                 zoom: 11.64
             }
-        },
-        {
-            'title': 'HAPPY ANNIVERSARY, OLIVIA!',
-            'description':
-                'It aint much, but its honest work',
-            'camera': {
-                center: [-74.0315, 40.6989],
-                zoom: 9.68,
-                bearing: 0,
-                pitch: 0
-            }
         }
     ];
 
@@ -152,10 +154,14 @@ body { margin: 0; padding: 0; }
         map.setFilter('omj-map-coordinates-sheet1-6bm15c', ['==', 'Name', code]);
     }
 
+    function setImage(index) {
+        photo.src = images[index] //Image for a specific location is based on the locations list position
+    }
+
     function playback(index) {
         title.textContent = locations[index].title; //The title for a specific location is based on the locations list position
         description.textContent = locations[index].description;
-        photo = locations[index].photo;
+        setImage(index);
 
         highlightSpot(locations[index].id ? locations[index].id : ''); //Argument for highlightSpot, which is the code parameter, is determined by locations list position
 
@@ -173,8 +179,8 @@ body { margin: 0; padding: 0; }
     }
 
     // Display the last title/description first.
-    title.textContent = locations[locations.length - 1].title;
-    description.textContent = locations[locations.length - 1].description;
+    // title.textContent = locations[locations.length - 1].title;
+    // description.textContent = locations[locations.length - 1].description;
 
     map.on('load', () => {
         // map.addLayer(
