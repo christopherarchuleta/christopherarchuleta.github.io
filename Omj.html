@@ -155,7 +155,7 @@ body { margin: 0; padding: 0; }
     function playback(index) {
         title.textContent = locations[index].title; //The title for a specific location is based on the locations list position
         description.textContent = locations[index].description;
-        // photo.textContent = locations[index].photo;
+        photo = locations[index].photo;
 
         highlightSpot(locations[index].id ? locations[index].id : ''); //Argument for highlightSpot, which is the code parameter, is determined by locations list position
 
