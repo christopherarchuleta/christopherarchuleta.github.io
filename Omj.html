@@ -53,6 +53,10 @@ body { margin: 0; padding: 0; }
         }
 
         /* Mobile first styling */
+        @media only screen and (min-width: 600px) {
+            .map-overlay-container {width: 98%;}
+        }
+
         @media only screen and (min-width: 850px) {
             .map-overlay-container {
                 position:absolute;
@@ -63,7 +67,7 @@ body { margin: 0; padding: 0; }
                 font-size: 24px;
                 margin: 0 0 6px;
             }
-            .map-overlay img {max-height: 250px}
+            .map-overlay img {max-height: 250px;}
         }
     </style>
 
