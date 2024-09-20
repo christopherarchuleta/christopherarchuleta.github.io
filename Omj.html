@@ -15,10 +15,11 @@ body { margin: 0; padding: 0; }
     <style>
         .map-overlay-container {  
             position: absolute;
-            width: 33%;
+            width: 90%;
+            height:auto;
             top: 0;
             left: 0;
-            padding: 10px;
+            padding: 5px;
             z-index: 1;
         }
     
@@ -35,19 +36,30 @@ body { margin: 0; padding: 0; }
     
         .map-overlay h2 {
             text-align: center;
-            font-size: 36px;
+            font-size: 18px;
             color: #0e4b24;
         }
 
         .map-overlay p {
             text-align: center;
-            font-size: 24px;
-            margin: 0 0 10px;
+            font-size: 14px;
+            margin: 0 0 3px;
             color: #0e4b24;
         }
 
         .map-overlay img {
             max-height: 50px; /* Make the image fit in the map overlay container */
+        }
+
+        /* Mobile first styling */
+        @media only screen and (min-width: 768px) {
+            .map-overlay-container {padding: 10px;}
+            .map-overlay h2 {font-size: 36px;}
+            .map-overlay p {
+                font-size: 24px;
+                margin: 0 0 6px;
+            }
+            .map-overlay img {max-height: 250px}
         }
     </style>
 
@@ -163,7 +175,7 @@ body { margin: 0; padding: 0; }
         description.textContent = locations[index].description;
         setImage(index);
 
-        highlightSpot(locations[index].id ? locations[index].id : ''); //Argument for highlightSpot, which is the code parameter, is determined by locations list position
+        highlightSpot(locations[index].id ? locations[index].id : ''); //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position
 
         // Animate the map position based on camera properties.
         map.flyTo(locations[index].camera);
@@ -174,7 +186,7 @@ body { margin: 0; padding: 0; }
                 // Increment index, looping back to the first after the last location.
                 index = (index + 1) % locations.length;
                 playback(index);
-            }, 20000); // After callback, show the location for 20 seconds.
+            }, 8000); // After callback, show the location for 20 seconds.
         });
     }
 
@@ -183,22 +195,7 @@ body { margin: 0; padding: 0; }
     // description.textContent = locations[locations.length - 1].description;
 
     map.on('load', () => {
-        // map.addLayer(
-        //     {
-        //         'id': 'highlight',
-        //         'type': 'fill',
-        //         'source': 'boroughs',
-        //         'source-layer': 'original',
-        //         'paint': {
-        //             'fill-color': '#fd6b50',
-        //             'fill-opacity': 0.25
-        //         },
-        //         'filter': ['==', 'borocode', '']
-        //     },
-        //     'road-label' // Place polygon under labels.
-        // );
-
-        // Start the playback animation for each borough.
+        // Start the playback animation for each location.
         playback(0);
     });
 </script>
