@@ -105,7 +105,6 @@ body { margin: 0; padding: 0; }
 
     const locations = [
         {
-            'id': 'Milwaukee Brat House',
             'title': 'HAPPY ANNIVERSARY, OLIVIA!',
             'description':
                 'It ain`t much, but it`s honest work. I love you so much and I cherish all of our memories!',
@@ -198,8 +197,11 @@ body { margin: 0; padding: 0; }
         description.textContent = locations[index].description;
         setImage(index); //Passing the index into the setImage function synchronizes the locations with the images
 
-        //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position. ID is used becuase all points should show when it says "Happy Anniversary".
-        highlightSpot(locations[index].id ? locations[index].id : '');
+        //Don't hightlight any single point with "Happy Anniversary"
+        if (locations[index] > 0) {
+            //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position.
+            highlightSpot(locations[index].id ? locations[index].id : '');
+        }
 
         // Animate the map position based on camera properties.
         map.flyTo(locations[index].camera);
