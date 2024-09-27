@@ -105,6 +105,7 @@ body { margin: 0; padding: 0; }
 
     const locations = [
         {
+            'id': 'null',
             'title': 'HAPPY ANNIVERSARY, OLIVIA!',
             'description':
                 'It ain`t much, but it`s honest work. I love you so much and I cherish all of our memories!',
@@ -116,7 +117,7 @@ body { margin: 0; padding: 0; }
             }
         },
         {
-            'id': '1',
+            'id': 'Milwaukee Brat House',
             'title': 'Milwaukee Brat House',
             'description':
                 "Our very first date! 08/26/2022",
@@ -127,7 +128,7 @@ body { margin: 0; padding: 0; }
             }
         },
         {
-            'id': '2',
+            'id': 'Home',
             'title': 'Home',
             'description':
                 "You, me, cats, plants, food, TV, games, dancing, and bed.",
@@ -138,7 +139,7 @@ body { margin: 0; padding: 0; }
             }
         },
         {
-            'id': '3',
+            'id': 'UWM',
             'title': 'UWM',
             'description':
                 "The hell that brought us together.",
@@ -149,7 +150,7 @@ body { margin: 0; padding: 0; }
             }
         },
         {
-            'id': '4',
+            'id': 'Bradford Beach',
             'title': 'Bradford Beach',
             'description':
                 'We had Twisted Teas and I got sunburnt.',
@@ -160,7 +161,7 @@ body { margin: 0; padding: 0; }
             }
         },
         {
-            'id': '5',
+            'id': 'Cheba Hut',
             'title': 'Cheba Hut',
             'description':
                 'The subs are so goooood! I would get blissful after just a couple sips, and you always looked phenomenal!',
@@ -171,7 +172,7 @@ body { margin: 0; padding: 0; }
             }
         },
         {
-            'id': '6',
+            'id': 'Knuckleheads',
             'title': 'Knuckleheads',
             'description':
                 'This was THE PLACE when we started getting high together.',
@@ -197,7 +198,8 @@ body { margin: 0; padding: 0; }
         description.textContent = locations[index].description;
         setImage(index); //Passing the index into the setImage function synchronizes the locations with the images
 
-        highlightSpot(locations[index].title ? locations[index].title : null); //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position. When argument is false, all points show.
+        //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position. ID is used becuase all points should show when it says "Happy Anniversary".
+        highlightSpot(locations[index].id ? locations[index].id : '');
 
         // Animate the map position based on camera properties.
         map.flyTo(locations[index].camera);
