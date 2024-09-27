@@ -198,7 +198,7 @@ body { margin: 0; padding: 0; }
         setImage(index); //Passing the index into the setImage function synchronizes the locations with the images
 
         //Don't hightlight any single point with "Happy Anniversary"
-        if (locations[index] > 0) {
+        if ( index > 0) {
             //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position.
             highlightSpot(locations[index].id ? locations[index].id : '');
         }
