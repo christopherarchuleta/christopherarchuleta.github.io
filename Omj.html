@@ -198,9 +198,12 @@ body { margin: 0; padding: 0; }
 
     function playback(index) {
 
+        // JQuery methods only once elements are loadded
+        $(document).ready(function(){
         $("#location-title").fadeIn(3000);
         $("#location-description").fadeIn("slow");
         $("#location-photo").fadeIn("slow");
+        });
 
         title.textContent = locations[index].title; //The title for a specific location is based on the locations list position
         description.textContent = locations[index].description;
