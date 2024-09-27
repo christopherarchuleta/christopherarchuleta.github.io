@@ -197,7 +197,7 @@ body { margin: 0; padding: 0; }
         description.textContent = locations[index].description;
         setImage(index); //Passing the index into the setImage function synchronizes the locations with the images
 
-        // highlightSpot(locations[index].id ? locations[index].id : ''); //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position
+        highlightSpot(locations[index].title ? locations[index].title : ''); //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position
 
         // Animate the map position based on camera properties.
         map.flyTo(locations[index].camera);
