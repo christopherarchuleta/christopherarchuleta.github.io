@@ -39,7 +39,6 @@ body { margin: 0; padding: 0; }
             text-align: center;
             font-size: 20px;
             color: #0d4a24;
-            transition: 1s ease-in-out all;
         }
 
         .map-overlay p {
@@ -47,12 +46,10 @@ body { margin: 0; padding: 0; }
             font-size: 16px;
             margin: 0 0 0.5em;
             color: #0d4a24;
-            transition: 1s ease-in-out all;
         }
 
         .map-overlay img {
-            max-height: 100px;
-            transition: 1s ease-in-out all; /* Make the image fit in the map overlay container */
+            max-height: 100px; /* Make the image fit in the map overlay container */
         }
 
         /* Mobile first styling */
@@ -91,6 +88,10 @@ body { margin: 0; padding: 0; }
 </div>
 
 <script>
+
+// Add jquery to make easy map overlay transitions
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY2phcmNodWxldGExMnV3bSIsImEiOiJjbTFiNXhwenYxbDluMmpvaW5tNWpyaDI1In0.tZ-qZeLZ34HEOdzbLIh4Kw';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
@@ -196,6 +197,11 @@ body { margin: 0; padding: 0; }
     }
 
     function playback(index) {
+
+        $("#location-title").fadeIn("slow");
+        $("#location-description").fadeIn("slow");
+        $("#location-photo").fadeIn("slow");
+
         title.textContent = locations[index].title; //The title for a specific location is based on the locations list position
         description.textContent = locations[index].description;
         setImage(index); //Passing the index into the setImage function synchronizes the locations with the images
