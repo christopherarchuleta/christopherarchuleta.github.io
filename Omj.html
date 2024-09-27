@@ -121,7 +121,7 @@ body { margin: 0; padding: 0; }
             'description':
                 "Our very first date! 08/26/2022",
             'camera': {
-                center: [-87.8877, 43.0897],
+                center: [-87.8874, 43.0897],
                 zoom: 19,
                 pitch: 20 // Up-down angle, with 0 being straight down and 85 being toward the horizon
             }
@@ -197,7 +197,7 @@ body { margin: 0; padding: 0; }
         description.textContent = locations[index].description;
         setImage(index); //Passing the index into the setImage function synchronizes the locations with the images
 
-        highlightSpot(locations[index].title ? locations[index].title : ''); //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position
+        highlightSpot(locations[index].title ? locations[index].title : locations.title); //Argument for highlightSpot, which is the "code" parameter, is determined by locations list position
 
         // Animate the map position based on camera properties.
         map.flyTo(locations[index].camera);
