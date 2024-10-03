@@ -198,9 +198,9 @@ body { margin: 0; padding: 0; }
 
     function playback(index) {
 
-        // JQuery methods only once elements are loadded
+        // JQuery methods only once elements are loaded
         $(document).ready(function(){
-        $("#location-title").fadeIn(3000);
+        $("#location-title").hide().fadeIn(3000);
         $("#location-description").fadeIn("slow");
         $("#location-photo").fadeIn("slow");
         });
@@ -229,17 +229,6 @@ body { margin: 0; padding: 0; }
         // Start the playback animation for each location.
         playback(0);
     });
-
-
-    window.onload = function() {
-    if (window.jQuery) {  
-        // jQuery is loaded  
-        alert("Yeah!");
-    } else {
-        // jQuery is not loaded
-        alert("Doesn't Work");
-    }
-}
 </script>
 
 </body>
