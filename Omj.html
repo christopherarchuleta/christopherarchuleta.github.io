@@ -200,7 +200,7 @@ body { margin: 0; padding: 0; }
 
         // JQuery methods only once elements are loaded
         $(document).ready(function(){
-        $("#location-title").hide().fadeIn(3500).delay(1000).fadeOut(3500);
+        $("#location-title").hide().fadeIn(3500);
         $("#location-description").hide().fadeIn(3500);
         $("#location-photo").hide().fadeIn(3500);
         });
@@ -222,6 +222,13 @@ body { margin: 0; padding: 0; }
                 index = (index + 1) % locations.length;
                 playback(index);
             }, 8000); // After callback, show the location for 20 seconds.
+
+            //Fade Out inside map.once Moveend to time according to map transition (otherwise fade out won't synchronize)
+            $(document).ready(function(){
+            $("#location-title").delay(4500).fadeOut(3500);
+            $("#location-description").delay(4500).fadeOut(3500);
+            $("#location-photo").delay(4500).fadeOut(3500);
+            });
         });
     }
 
