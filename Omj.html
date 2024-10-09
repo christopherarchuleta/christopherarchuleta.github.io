@@ -225,9 +225,9 @@ body { margin: 0; padding: 0; }
 
             //Fade Out inside map.once Moveend to time according to map transition (otherwise fade out won't synchronize)
             $(document).ready(function(){
-            $("#location-title").delay(4500).fadeOut(3500);
-            $("#location-description").delay(4500).fadeOut(3500);
-            $("#location-photo").delay(4500).fadeOut(3500);
+            $("#location-title").delay(4500).fadeOut(3500).fadeIn(3500);
+            $("#location-description").delay(4500).fadeOut(3500).fadeIn(3500);
+            $("#location-photo").delay(4500).fadeOut(3500).fadeIn(3500);
             });
         });
     }
