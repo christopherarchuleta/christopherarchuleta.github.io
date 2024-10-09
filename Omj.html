@@ -199,11 +199,11 @@ body { margin: 0; padding: 0; }
     function playback(index) {
 
         // JQuery methods only once elements are loaded
-        $(document).ready(function(){
-        $("#location-title").hide().fadeIn(3500);
-        $("#location-description").hide().fadeIn(3500);
-        $("#location-photo").hide().fadeIn(3500);
-        });
+        // $(document).ready(function(){
+        // $("#location-title").hide().fadeIn(3500);
+        // $("#location-description").hide().fadeIn(3500);
+        // $("#location-photo").hide().fadeIn(3500);
+        // });
 
         title.textContent = locations[index].title; //The title for a specific location is based on the locations list position
         description.textContent = locations[index].description;
