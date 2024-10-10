@@ -206,17 +206,12 @@ body { margin: 0; padding: 0; }
         highlightSpot(locations[index].id ? locations[index].id : '');
 
         // Animate the map position based on camera properties.
-        map.flyTo(locations[index].camera);
-
-        var startTime;
-        map.once('movestart', () => {
-            var startTime = Date.now();
+        map.flyTo({
+            locations[index].camera,
+            duration: 3500;
         });
 
         map.once('moveend', () => {
-            //Calculate flyTo duration to fadeIn accordingly.
-            var endTime = Date.now();
-            var flyToTime = endTime - startTime;
             // Duration the slide is on screen after interaction.
             window.setTimeout(() => {
                 // Increment index, looping back to the first after the last location.
@@ -226,9 +221,9 @@ body { margin: 0; padding: 0; }
 
             //Fade Out inside map.once Moveend to time according to map transition (otherwise fade out won't synchronize)
             $(document).ready(function(){
-            $("#location-title").delay(4500).fadeOut(3500).fadeIn(flyToTime);
-            $("#location-description").delay(4500).fadeOut(3500).fadeIn(flyToTime);
-            $("#location-photo").delay(4500).fadeOut(3500).fadeIn(flyToTime);
+            $("#location-title").delay(4500).fadeOut(3500).fadeIn(3500);
+            $("#location-description").delay(4500).fadeOut(3500).fadeIn(3500);
+            $("#location-photo").delay(4500).fadeOut(3500).fadeIn(3500);
             });
         });
     }
