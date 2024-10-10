@@ -206,7 +206,10 @@ body { margin: 0; padding: 0; }
         highlightSpot(locations[index].id ? locations[index].id : '');
 
         // Animate the map position based on camera properties.
-        map.flyTo(locations[index].camera);
+        map.flyTo({
+            locations[index].camera,
+            duration: 3500
+        });
 
         map.once('moveend', () => {
             // Duration the slide is on screen after interaction.
