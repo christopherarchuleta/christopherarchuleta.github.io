@@ -206,9 +206,14 @@ body { margin: 0; padding: 0; }
         highlightSpot(locations[index].id ? locations[index].id : '');
 
         // Animate the map position based on camera properties.
-        map.flyTo(locations[index].camera, {
-            maxDuration: 3500,
-            essential: true
+        map.flyTo(locations[index].camera);
+
+        map.once('movestart', () => {
+            $(document).ready(function(){
+            $("#location-title").fadeIn(3500);
+            $("#location-description").fadeIn(3500);
+            $("#location-photo").fadeIn(3500);
+            });
         });
 
         map.once('moveend', () => {
@@ -221,9 +226,9 @@ body { margin: 0; padding: 0; }
 
             //Fade Out inside map.once Moveend to time according to map transition (otherwise fade out won't synchronize)
             $(document).ready(function(){
-            $("#location-title").delay(4500).fadeOut(3500).fadeIn(3500);
-            $("#location-description").delay(4500).fadeOut(3500).fadeIn(3500);
-            $("#location-photo").delay(4500).fadeOut(3500).fadeIn(3500);
+            $("#location-title").delay(6000).fadeOut(2000);
+            $("#location-description").delay(6000).fadeOut(2000);
+            $("#location-photo").delay(6000).fadeOut(2000);
             });
         });
     }
