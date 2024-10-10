@@ -208,7 +208,7 @@ body { margin: 0; padding: 0; }
         // Animate the map position based on camera properties.
         map.flyTo(locations[index].camera);
 
-
+        var startTime;
         map.once('movestart', () => {
             var startTime = Date.now();
         });
