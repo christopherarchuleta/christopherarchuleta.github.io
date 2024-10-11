@@ -210,9 +210,9 @@ body { margin: 0; padding: 0; }
 
         map.once('movestart', () => {
             $(document).ready(function(){
-            $("#location-title").fadeIn(3500);
-            $("#location-description").fadeIn(3500);
-            $("#location-photo").fadeIn(3500);
+            $("#location-title").fadeIn(2000);
+            $("#location-description").fadeIn(2000);
+            $("#location-photo").fadeIn(2000);
             });
         });
 
@@ -226,9 +226,9 @@ body { margin: 0; padding: 0; }
 
             //Fade Out inside map.once Moveend to time according to map transition (otherwise fade out won't synchronize)
             $(document).ready(function(){
-            $("#location-title").stop(false, true).delay(6000).fadeOut(2000);
-            $("#location-description").stop(false, true).delay(6000).fadeOut(2000);
-            $("#location-photo").stop(false, true).delay(6000).fadeOut(2000);
+            $("#location-title").stop(false, true).delay(5000).fadeOut(3000);
+            $("#location-description").stop(false, true).delay(5000).fadeOut(3000);
+            $("#location-photo").stop(false, true).delay(5000).fadeOut(3000);
             });
         });
     }
