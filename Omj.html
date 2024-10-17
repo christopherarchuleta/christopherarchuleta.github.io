@@ -456,10 +456,9 @@ body { margin: 0; padding: 0; }
         highlightSpot(locations[index].id ? locations[index].id : '');
 
         // Animate the map position based on camera properties.
-        map.flyTo({
-            center: locations[index].camera,
+        map.flyTo(locations[index].camera, {
             speed: 0.2
-         });
+        });
 
         map.once('movestart', () => {
             $(document).ready(function(){
