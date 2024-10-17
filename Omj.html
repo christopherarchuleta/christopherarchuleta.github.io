@@ -328,6 +328,18 @@ body { margin: 0; padding: 0; }
             }
         },
         {
+        'id': 'Lantern Festival',
+            'title': 'Lantern Festival',
+            'description':
+                'One of the most beautiful events of the summer, the lantern festival.',
+            'camera': {
+                center: [-87.8909, 43.0484],
+                bearing: 345,
+                zoom: 14,
+                pitch: 10
+            }
+        },
+        {
         'id': 'The Art Institute of Chicago',
             'title': 'The Art Institute of Chicago',
             'description':
@@ -335,7 +347,7 @@ body { margin: 0; padding: 0; }
             'camera': {
                 center: [-87.624, 41.8796],
                 bearing: 0,
-                zoom: 13,
+                zoom: 13.8,
                 pitch: 20
             }
         },
@@ -386,6 +398,42 @@ body { margin: 0; padding: 0; }
                 zoom: 11.5,
                 pitch: 0
             }
+        },
+        {
+        'id': 'Estabrook Park',
+            'title': 'Estabrook Park',
+            'description':
+                'Strolling in the park...looking at deer...eating Taco Bell.',
+            'camera': {
+                center: [-87.9001, 43.0928],
+                bearing: 0,
+                zoom: 13,
+                pitch: 0
+            }
+        },
+        {
+        'id': 'Menomonee Park',
+            'title': 'Menomonee Park',
+            'description':
+                'This is where we found turkey tail mushrooms and saw sandhill cranes.',
+            'camera': {
+                center: [-88.1716, 43.1588],
+                bearing: 0,
+                zoom: 13,
+                pitch: 0
+            }
+        },
+        {
+        'id': 'Basse\'s Farms',
+            'title': 'Basse`s Farms',
+            'description':
+                'STRAWBERRY PICKING! They were so delicious and stayed good for days!',
+            'camera': {
+                center: [-88.1972, 43.1936],
+                bearing: 130,
+                zoom: 11,
+                pitch: 15
+            }
         }
     ];
 
@@ -408,7 +456,10 @@ body { margin: 0; padding: 0; }
         highlightSpot(locations[index].id ? locations[index].id : '');
 
         // Animate the map position based on camera properties.
-        map.flyTo(locations[index].camera);
+        map.flyTo({
+            center: locations[index].camera,
+            speed: 0.2
+         });
 
         map.once('movestart', () => {
             $(document).ready(function(){
