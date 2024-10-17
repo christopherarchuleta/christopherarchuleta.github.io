@@ -457,12 +457,11 @@ body { margin: 0; padding: 0; }
 
         // Animate the map position based on camera properties.
         const flyLocation = locations[index].camera;
-        // map.flyTo({
-        //     flyLocation,
-        //     speed: 0.6,
-        //     essential: true
-        // });
-        map.flyTo(locations[index].camera);
+        map.flyTo({
+            ...flyLocation, //"..." is the spread operator, which is necessary for passing all parts of locations such as pitch, zoom, etc. into flyTo.
+            speed: 0.6,
+            essential: true
+        });
 
         map.once('movestart', () => {
             $(document).ready(function(){
