@@ -456,8 +456,10 @@ body { margin: 0; padding: 0; }
         highlightSpot(locations[index].id ? locations[index].id : '');
 
         // Animate the map position based on camera properties.
-        map.flyTo(locations[index].camera, {
-            duration: 10000,
+        const flyLocation = locations[index].camera;
+        map.flyTo({
+            flyLocation,
+            speed: 0.6,
             essential: true
         });
 
