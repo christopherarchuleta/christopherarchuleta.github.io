@@ -458,9 +458,9 @@ body { margin: 0; padding: 0; }
         // Animate the map position based on camera properties.
         const flyLocation = locations[index].camera;
         map.flyTo({
-            flyLocation,
-            speed: 0.6,
-            essential: true
+            flyLocation
+            // speed: 0.6,
+            // essential: true
         });
 
         map.once('movestart', () => {
