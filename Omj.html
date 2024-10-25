@@ -458,7 +458,7 @@ body { margin: 0; padding: 0; }
         'id': 'The Sailboats',
             'title': '"The Sailboats"',
             'description':
-                'This was probably the most magical place this year. The boats, the swallows, the dragonflies, the chicory.',
+                'Probably the most magical place this year. The boats, the swallows, the dragonflies, the chicory.',
             'camera': {
                 center: [-87.885, 43.045],
                 bearing: 130,
@@ -520,13 +520,13 @@ body { margin: 0; padding: 0; }
                 // Increment index, looping back to the first after the last location.
                 index = (index + 1) % locations.length;
                 playback(index);
-            }, 5000); // After callback, show the location for 18 seconds.
+            }, 18000); // After callback, show the location for 18 seconds.
 
             //Fade Out inside map.once Moveend to time according to map transition (otherwise fade out won't synchronize)
             $(document).ready(function(){
-            $("#location-title").stop(false, true).delay(2000).fadeOut(3000);
-            $("#location-description").stop(false, true).delay(2000).fadeOut(3000);
-            $("#location-photo").stop(false, true).delay(2000).fadeOut(3000);
+            $("#location-title").stop(false, true).delay(15000).fadeOut(3000);
+            $("#location-description").stop(false, true).delay(15000).fadeOut(3000);
+            $("#location-photo").stop(false, true).delay(15000).fadeOut(3000);
             });
         });
     }
