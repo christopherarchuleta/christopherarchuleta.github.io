@@ -149,10 +149,7 @@ h2 {
 
 #Image {
   background-color: #0c2c1e;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0.1em;
   transition: 0.3s;
 }
 
