@@ -195,6 +195,7 @@ p {
 }
 
 .map-title {
+  margin: auto;
   font-family: Helvetica, sans-serif;
   position:absolute;
   opacity: 0.8;
