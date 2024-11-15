@@ -153,6 +153,7 @@ h2 {
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
+  transition: 0.3s;
 }
 
 #Image:hover {
