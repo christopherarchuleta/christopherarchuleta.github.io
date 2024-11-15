@@ -194,6 +194,14 @@ p {
   padding-right: 30px;
 }
 
+.map-title {
+  font-family: Helvetica, sans-serif;
+  position:absolute;
+  opacity: 0.8;
+  transition: 0.3s;
+  text-align: center;
+}
+
 
 /* Resume styling */
 /* Change resume margins based on screen size */
