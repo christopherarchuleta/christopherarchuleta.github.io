@@ -34,7 +34,7 @@ h2 {
 
 #MapContainer {
   background-color: #0c2c1e;
-  display: flex;
+  /* display: flex; */
 }
 
 #page-content-wrapper {
@@ -151,7 +151,7 @@ h2 {
 #Image {
   background-color: #0c2c1e;
   max-width: 95;
-  padding: 0.1em;
+  padding: 0.5em;
   transition: 0.3s;
 }
 
