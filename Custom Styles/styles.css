@@ -152,7 +152,7 @@ h2 {
 
 #Image {
   background-color: #0c2c1e;
-  position:absolute;
+  position:relative;
   width:auto;
   align-content: center;
   height:auto;
@@ -193,6 +193,10 @@ p {
   padding-bottom:0px;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.title-container {
+
 }
 
 .map-title {
