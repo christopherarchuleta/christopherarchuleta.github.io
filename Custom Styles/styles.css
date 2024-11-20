@@ -152,7 +152,6 @@ h2 {
 
 #Image {
   background-color: #0c2c1e;
-  position:relative;
   width:auto;
   align-content: center;
   height:auto;
@@ -195,8 +194,13 @@ p {
   padding-right: 30px;
 }
 
-.title-container {
-
+.title-container:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .map-title {
