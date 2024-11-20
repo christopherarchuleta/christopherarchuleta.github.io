@@ -152,6 +152,7 @@ h2 {
 
 #Image {
   background-color: #0c2c1e;
+  position:absolute;
   width:auto;
   align-content: center;
   height:auto;
