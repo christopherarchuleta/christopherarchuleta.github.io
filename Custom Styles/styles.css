@@ -147,7 +147,8 @@ h2 {
   padding-bottom: 8px;
   padding-left: 8px;
   padding-right: 8px;
-  width: auto;
+  max-width: 33%;
+  height: auto;
 }
 
 #Image {
