@@ -142,6 +142,7 @@ h2 {
 #PicAnchor{
   background-color: #0c2c1e;
   position: relative;
+  transition: 0.3s;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 8px;
@@ -153,16 +154,15 @@ h2 {
   background-color: #0c2c1e;
   max-width: 95;
   padding: 0.5em;
-  transition: 0.3s;
   max-width: 95%;
   height:auto;
 }
 
-#Image:hover {
+#PicAnchor:hover {
   background-color: #00884b;
 }
 
-#Image:after {
+#PicAnchor:after {
   background-color: #0c2c1e;
 }
 
