@@ -153,8 +153,8 @@ h2 {
 #Image {
   background-color: #0c2c1e;
   max-width: 95;
-  padding: 0.5em;
   max-width: 95%;
+  align-content: center;
   height:auto;
 }
 
