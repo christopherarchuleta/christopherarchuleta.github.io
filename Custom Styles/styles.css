@@ -34,7 +34,7 @@ h2 {
 
 #MapContainer {
   background-color: #0c2c1e;
-  display: inline-block;
+  display: block;
 }
 
 #page-content-wrapper {
