@@ -238,7 +238,8 @@ p {
 }
 
 #PicAnchor:hover #Image {
-  opacity: 0.7;
+  filter: brightness(50%);
+  transition: 0.3s ease-in-out;
 }
 
 
