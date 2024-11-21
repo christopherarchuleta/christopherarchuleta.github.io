@@ -212,6 +212,21 @@ p {
   text-align: center;
 }
 
+.title-cover {
+  padding: 6px;
+  display: block;
+  color: #2b2b2b;
+}
+
+#PicAnchor .title-cover {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#PicAnchor:hover .title-cover {
+  opacity: 0.7;
+}
+
 #PicAnchor .map-title {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -220,6 +235,8 @@ p {
 #PicAnchor:hover .map-title {
   opacity: 1;
 }
+
+#PicAnchor
 
 
 /* Resume styling */
