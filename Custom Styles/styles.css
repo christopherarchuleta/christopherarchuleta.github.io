@@ -207,6 +207,8 @@ p {
   position:relative;
   text-align: center;
   padding: 12px;
+  color: white;
+  background-color: #2b2b2b;
 }
 
 .title-cover {
@@ -214,7 +216,6 @@ p {
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #2b2b2b;
   height: fit-content;
 }
 
