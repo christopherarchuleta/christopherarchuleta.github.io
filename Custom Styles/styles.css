@@ -237,7 +237,9 @@ p {
   opacity: 1;
 }
 
-#PicAnchor
+#PicAnchor:hover #Image {
+  opacity: 0.7;
+}
 
 
 /* Resume styling */
