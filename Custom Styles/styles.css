@@ -141,14 +141,10 @@ h2 {
 
 #PicAnchor{
   background-color: #0c2c1e;
-  display:inline-block;
+  display:block;
   position: relative;
   transition: 0.3s;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
-  max-width: 33%;
+  padding: 8px;
   height: auto;
 }
 
