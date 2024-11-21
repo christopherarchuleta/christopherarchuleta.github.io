@@ -212,13 +212,16 @@ p {
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.8;
-  transition: 0.3s;
   text-align: center;
 }
 
-#PicAnchor:before > .map-title {
-  content: "";
+#PicAnchor .map-title {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#PicAnchor:hover .map-title {
+  opacity: 1;
 }
 
 
