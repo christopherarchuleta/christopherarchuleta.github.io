@@ -167,10 +167,6 @@ h2 {
   background-color: #0c2c1e;
 }
 
-#PicAnchor:before > .map-title {
-  content: "";
-}
-
 p {
     font-family: Helvetica, sans-serif;
     line-height: 1.8;
@@ -219,6 +215,10 @@ p {
   opacity: 0.8;
   transition: 0.3s;
   text-align: center;
+}
+
+#PicAnchor:before > .map-title {
+  content: "";
 }
 
 
