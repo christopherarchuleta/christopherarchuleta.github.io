@@ -205,11 +205,12 @@ p {
 .map-title {
   margin: auto;
   font-family: Helvetica, sans-serif;
-  position:absolute;
+  position:relative;
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  padding: 12px;
 }
 
 .title-cover {
@@ -218,8 +219,8 @@ p {
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 6px;
   color: #2b2b2b;
+  height: fit-content;
 }
 
 #PicAnchor .title-cover {
