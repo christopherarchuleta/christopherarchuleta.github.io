@@ -85,6 +85,27 @@ h2 {
   }
 }
 
+/* Thumb-primacy: Put menu on bottom for smaller screens */
+@media screen and (max-width: 600px) {
+  #NavbarMobile {
+    bottom: 0;
+    left: 0; /* Put menu on bottom left */
+    position:fixed; /* Make menu stick to bottom */
+    width: 100%;
+    z-index: 1000; /* Higher values mean higher "layer". Appear on top */
+  }
+
+  #Navbar {
+    display: none;
+  }
+
+  /* Make room for navbar at bottom */
+  body {
+    padding-bottom: 50px;
+  }
+
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
