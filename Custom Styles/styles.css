@@ -56,6 +56,11 @@ h2 {
   background-color: #00884b;
 }
 
+/* Only have to top menu with larger screens */
+#NavbarMobile {
+  display: none;
+}
+
 /* Hide link that opens and closes navigation bar on mobile devices */
 .topnav .icon {
   display: none;
