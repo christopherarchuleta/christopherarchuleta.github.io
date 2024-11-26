@@ -80,8 +80,8 @@ h2 {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
-    right: 0;
-    top: 0;
+    left: 0;
+    bottom: 0;
   }
   .topnav.responsive a {
     float: none;

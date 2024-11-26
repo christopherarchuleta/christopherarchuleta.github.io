@@ -14,7 +14,7 @@ $("img#Image").hover(function() {
 document.getElementById("icon").onclick = function()
 {verticalMenu()};
 function verticalMenu() {
-  var vertBar = document.getElementById("Navbar");
+  var vertBar = document.getElementById("NavbarMobile");
   if (vertBar.className === "topnav") {
     vertBar.className += " responsive";
   } else {
