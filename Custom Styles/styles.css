@@ -86,9 +86,9 @@ h2 {
     z-index: 1000; /* Higher values mean higher "layer". Appear on top */
   }
 
-  #NavbarMobile a:not(.icon) {
+  #NavbarMobile.responsive a:not(.icon) {
     float: none;
-    display: inline-block;
+    display: block;
     text-align: center;
   }
 
