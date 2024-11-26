@@ -86,6 +86,16 @@ h2 {
     z-index: 1000; /* Higher values mean higher "layer". Appear on top */
   }
 
+  /* Make menu vertical on mobile screens */
+  #NavbarMobile.responsive {
+    display: block;
+  }
+
+  #NavbarMobile a {
+    display: inline-block;
+    text-align: center;
+  }
+
   #Navbar {
     display: none;
   }
@@ -93,19 +103,6 @@ h2 {
   /* Make room for navbar at bottom */
   body {
     padding-bottom: 50px;
-  }
-
-  /* Make menu vertical on mobile screens */
-  .topnav.responsive /* {position: relative;} */
-  .topnav.responsive a.icon {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
   }
 
 }
