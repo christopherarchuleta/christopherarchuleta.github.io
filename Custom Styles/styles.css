@@ -56,7 +56,7 @@ h2 {
   background-color: #00884b;
 }
 
-/* Only have to top menu with larger screens */
+/* Only have top menu with larger screens */
 #NavbarMobile {
   display: none;
 }
@@ -93,6 +93,7 @@ h2 {
 /* Thumb-primacy: Put menu on bottom for smaller screens */
 @media screen and (max-width: 600px) {
   #NavbarMobile {
+    display: block;
     bottom: 0;
     left: 0; /* Put menu on bottom left */
     position:fixed; /* Make menu stick to bottom */
