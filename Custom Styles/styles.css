@@ -68,7 +68,6 @@ h2 {
 
 /* Collapse menu when screen is less than 600 pixels wide */
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
@@ -85,6 +84,8 @@ h2 {
     width: 100%;
     z-index: 1000; /* Higher values mean higher "layer". Appear on top */
   }
+
+  #NavbarMobile a:not(:first-child) {display: none;}
 
   #NavbarMobile.responsive a:not(.icon) {
     float: none;
