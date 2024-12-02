@@ -15,9 +15,9 @@ document.getElementById("icon").onclick = function()
 {verticalMenu()};
 function verticalMenu() {
   var vertBar = document.getElementById("NavbarMobile");
-  if (vertBar.className === 'topnav') {
-    vertBar.className += ' responsive'
+  if (vertBar.classList.contains('topnav')) {
+    vertBar.classList.add('responsive')
   } else {
-    vertBar.className = 'topnav'
+    vertBar.classList.remove('responsive')
   }
 };
