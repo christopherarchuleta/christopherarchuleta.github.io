@@ -18,16 +18,16 @@ window.onload = function() {
   {verticalMenu()};
   function verticalMenu() {
     const vertBarList = document.getElementById("NavbarMobile").classList;
-    if (vertBarList.contains('topnav')) {
-      vertBarList.add('responsive');
+    if (vertBarList.contains('responsive')) {
+      vertBarList.remove('responsive')
     } else {
-      vertBarList.remove('responsive');
+      vertBarList.add('responsive')
     }
 
     if (vertBarList.contains('responsive')) {
-      console.log('responsive');
+      console.log('responsive')
     } else {
-      ('no');
+      ('no')
     }
   };
 
