@@ -19,5 +19,11 @@ function verticalMenu() {
     vertBar.classList.add('responsive')
   } else {
     vertBar.classList.remove('responsive')
+  };
+
+  if vertBar.classList.contains('responsive') {
+    console.log('responsive')
+  } else {
+    ('no')
   }
 };
