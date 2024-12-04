@@ -21,7 +21,7 @@ function verticalMenu() {
     vertBar.classList.remove('responsive')
   };
 
-  if vertBar.classList.contains('responsive') {
+  if (vertBar.classList.contains('responsive')) {
     console.log('responsive')
   } else {
     ('no')
