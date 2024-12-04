@@ -14,16 +14,16 @@ $("img#Image").hover(function() {
 document.getElementById("icon").onclick = function()
 {verticalMenu()};
 function verticalMenu() {
-  var vertBar = document.getElementById("NavbarMobile");
-  if (vertBar.classList.contains('topnav')) {
-    vertBar.classList.add('responsive')
+  const vertBarList = document.getElementById("NavbarMobile").classList;
+  if (vertBarList.contains('topnav')) {
+    vertBarList.add('responsive');
   } else {
-    vertBar.classList.remove('responsive')
-  };
+    vertBarList.remove('responsive');
+  }
 
-  if (vertBar.classList.contains('responsive')) {
-    console.log('responsive')
+  if (vertBarList.contains('responsive')) {
+    console.log('responsive');
   } else {
-    ('no')
+    ('no');
   }
 };
