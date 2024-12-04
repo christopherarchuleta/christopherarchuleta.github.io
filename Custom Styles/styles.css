@@ -61,11 +61,6 @@ h2 {
   display: none;
 }
 
-/* Hide link that opens and closes navigation bar on mobile devices */
-.topnav .icon {
-  display: none;
-}
-
 /* Thumb-primacy: Put menu on bottom for smaller screens */
 @media screen and (max-width: 600px) {
   #NavbarMobile {
@@ -77,20 +72,6 @@ h2 {
     z-index: 1000; /* Higher values mean higher "layer". Appear on top */
   }
 
-  /* Collapse menu when screen is less than 600 pixels wide */
-  #NavbarMobile a:not(:first-child) {display: none;}
-
-  #NavbarMobile.responsive a:not(.icon) {
-    float: none;
-    display: block;
-    text-align: center;
-  }
-
-  #NavbarMobile a.icon {
-    float: right;
-    display: block;
-  }
-
   #Navbar {
     display: none;
   }
@@ -98,19 +79,6 @@ h2 {
   /* Make room for navbar at bottom */
   body {
     padding-bottom: 50px;
-  }
-
-  /* Make menu vertical on mobile screens */
-  #NavbarMobile.responsive {position: relative;}
-  #NavbarMobile.responsive a.icon {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  #NavbarMobile.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
   }
 
 }

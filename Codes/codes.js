@@ -11,24 +11,4 @@ window.onload = function() {
   });
 
 
-  // Responsive class in topnav makes menu vertically oriented
-  // Function below activated the responsive class
-  // Expand menu upon icon click
-  document.getElementById("icon").onclick = function()
-  {verticalMenu()};
-  function verticalMenu() {
-    const vertBarList = document.getElementById("NavbarMobile").classList;
-    if (vertBarList.contains('responsive')) {
-      vertBarList.remove('responsive')
-    } else {
-      vertBarList.add('responsive')
-    }
-
-    if (vertBarList.contains('responsive')) {
-      console.log('responsive')
-    } else {
-      ('no')
-    }
-  };
-
 };
