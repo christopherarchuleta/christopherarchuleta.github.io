@@ -289,7 +289,7 @@ li::marker {
 .resumePosition {
   float: right;
   width: 85%;
-  font-weight: lighter;
+  font-style: bold;
   padding-left: 0.5em;
 }
 .resumeContent {
