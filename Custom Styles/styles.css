@@ -298,6 +298,11 @@ li::marker {
 width: 85%; */
 }
 
+iframe {
+  display: block;
+  margin:auto;
+}
+
 #objective {
   margin-left: 9vw;
   padding-left: 2rem;
