@@ -303,12 +303,14 @@ iframe {
   margin:auto;
   width:559px;
   height:315px;
+  border:none;
 }
 
 @media screen and (max-width: 600px) {
   iframe {
     width: 319px;
     height: 180px;
+    border:none;
   }
 }
 
